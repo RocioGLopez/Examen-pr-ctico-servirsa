@@ -146,3 +146,14 @@ join asistencia a
 group by empleado;
 
 
+#prueba para vverificar empleado y asistencia 
+SELECT 
+    p.id_empleado,
+    p.fecha,
+    a.horas_trabajadas
+FROM planificacion p
+LEFT JOIN asistencia a 
+    ON p.id_empleado = a.id_empleado 
+    AND p.fecha = a.fecha;
+
+
